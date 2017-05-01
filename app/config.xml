@@ -126,6 +126,8 @@
     <preference name="StatusBarStyle" value="default" />
     <preference name="ios-statusbarstyle" value="default" />
 
+    <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
+
      -->
     
     
@@ -143,9 +145,7 @@
         <false/>
     </gap:config-file>
     
-    <!-- BHS 2016 team 3 plugin -->
-    <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
-
+    
     
     
     <!-- what are these? -->
