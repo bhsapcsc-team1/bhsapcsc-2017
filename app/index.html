@@ -1,132 +1,94 @@
-
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
-            <title>Bainbridge Youth Services</title>
-            <link rel="stylesheet" href="styles/BYSMobile.min.css" />
-            <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
-            <link rel="stylesheet" href="styles/custom.css" />
-            <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css" />
-            <link rel="stylesheet" href="styles/font-awesome.min.css" />
-            <script src="scripts/libs/jquery-1.11.1.min.js"></script>
-            <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
-            <script src="scripts/libs/jquery.pageset.js"></script>
-            <script src="cordova.js"></script>
-            
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
+    <title>Bainbridge Youth Services</title>
+    <link rel="stylesheet" href="styles/BYSMobile.min.css" />
+    <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <script src="scripts/libs/jquery-1.11.1.min.js"></script>
+    <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts/libs/jquery.pageset.js"></script>
+    <script src="cordova.js"></script>
+
 </head>
-    <body id="index">
-        <div data-role="page" id="home" data-theme="a" >
-            <div data-role="content" data-theme="a">
-                <a href="#myPanel" > <i class="fa fa-bars"></i> </a>
-                
-                <div class="text-center">
-                    <img src="images/askbys.png"/>
-                </div>
-                
-                <br>
-                <form>
-                    <div class="ui-field-contain">
-                        <label for="select-native-2">Search Topics:</label>
-                        <select onchange="if (this.value) window.location.href=this.value" data-theme="d">
-                            <option value="">Real Stories</option>
-                            <option value="abuse.html">Abuse</option>
-                            <option value="bullying.html">Bullying</option>
-                            <option value="drugs-alcohol.html">Drugs &amp; Alcohol</option>
-                            <option value="family.html">Family</option>
-                            <option value="feelings.html">Feelings</option>
-                            <option value="medical.html">Medical</option>
-                            <option value="relationships.html">Relationships</option>
-                            <option value="school.html">School</option>
-                            <option value="suicide.html">Suicide</option>
-                            <option value="advancedsearch3.html">Advanced Search</option>
-                        </select>
-                    </div>
-                </form>
-                                
-                                
-                                
-                <button id="button" data-theme="c" onclick="goGetWordPressForm('https://askbys.org/appointment-mobile/','none')">Make an appointment</button>
-                <button id="button" onclick="goGetWordPressForm('https://askbys.org/ask-a-counselor-mobile/','none')">Ask a counselor</button>
-                <button id="button" data-theme="b" onclick="goGetWordPressForm('https://askbys.org/ask-a-doctor-mobile/','none')">Ask a doctor</button>
-                                
-                <br>
-                <br>
-                                
-                <!--buttons-->
-                <div align="center">
-                    <img src="images/Twitterbird.png" height="30" width="30" onclick="goGetWordPressForm('http://twitter.com/askbysorg','twitter')"> &nbsp; &nbsp;
-                    <img src="images/Transparent-Facebook-Logo-Icon.png" height="30" width="30" onclick="goGetWordPressForm('https://www.facebook.com/230144303829183','fb')">  &nbsp; &nbsp;
-                    <a href="tel:206-707-6388"> <img src="images/MetroUI_Phone.png" height="30" width="30"></a> &nbsp; &nbsp;
-                    <img src="images/Google Calendar.png" height="30" width="30" onclick="goGetWordPressForm('https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA','none')">
-                        &nbsp; &nbsp;
-                </div>
-                                
+
+<body id="index">
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="content" data-theme="a">
+            <a href="#myPanel"> <i class="fa fa-bars"></i> </a>
+
+            <div class="text-center">
+                <img src="images/askbys.png" />
             </div>
-                    
-                    <!--Panel-->
-                    <div data-role="panel" id="myPanel">
-                        <br>
-                        <div align=“center”>
-                            <img src="images/askbys.png" width="60%">
-                        </div>
-                        <br>
-                        <p>askBYS is a service of Bainbridge Youth Services (BYS), a 50 year old organization whose mission is to promote the social and emotional well being of teens and their families.
-                        <p>With the askBYS app you can:
-                        
-                        <p>Make an appointment request with a BYS therapist (we are located in Bainbridge Island, WA).
-                        
-                        <p>Ask questions to BYS therapists and medical doctors.
-                        
-                        <p>Read questions posed by other teens and answers given by BYS.
-                        
-                        <p>Connect with our Facebook and Twitter accounts (askBYSorg) and askBYS Calendar.
-                        
-                        <p>Visit us at <a onclick="goGetWordPressForm('http://askbys.org','none')"> askBYS.org </a> for more resources and information about our organization.
-                        
-                        <p>© 2016 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
-                        
-                        <p>Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016 BHS AP Computer Science class:<p>
-                        <p>Team 1: Collapsible search results UI, research on unreachable network</p>
-                        <ul>
-                            <li>Curren Hamlet</li>
-                            <li>Ricardo Grande Cros</li>
-                            <li>Chas Fordyce</li>
-                        </ul>
-                        <img src="images/Team1.jpg" width="80%">
-                        <p>Team 2: Advanced Search</p>
-                        <ul>
-                            <li>Alyssa Gangi</li>
-                            <li>Keaton Blair</li>
-                            <li>Elijah Burns</li>
-                            <li>Jeremy Lipschutz</li>
-                        </ul>
-                        <img src="images/Team2.jpg" width="80%">
-                        <p>Team 3: Local application integration, new icons, calendar access</p>
-                        <ul>
-                            <li>Cooper Sprague</li>
-                            <li>Sebastian Batali</li>
-                            <li>Leilani Tuinukuafe</li>
-                            <li>John Zhang</li>
-                        </ul>
-                        <img src="images/Team3.jpg" width="80%">
-                        <p>Team 4: New UI css, splash screens and screen shots</p>
-                        <ul>
-                            <li>Ryan Cox</li>
-                            <li>Shelby Sundquist</li>
-                            <li>Sam Holzer</li>
-                            <li>John Michael Najarian</li>
-                        </ul>
-                        <img src="images/Team4.jpg" width="80%">
-                        
-                        </div>
-                    
-                    
-                    
+            <p><a href="askbys.html">Go to new page</a></p>
         </div>
-        <script>
-            // open win and turn off location and Kirk update 1
+
+        <!--Panel-->
+        <div data-role="panel" id="myPanel">
+            <br>
+            <div align=“center”>
+                <img src="images/askbys.png" width="60%">
+            </div>
+            <br>
+            <p>askBYS is a service of Bainbridge Youth Services (BYS), a 50 year old organization whose mission is to promote the social and emotional well being of teens and their families.
+                <p>With the askBYS app you can:
+
+                    <p>Make an appointment request with a BYS therapist (we are located in Bainbridge Island, WA).
+
+                        <p>Ask questions to BYS therapists and medical doctors.
+
+                            <p>Read questions posed by other teens and answers given by BYS.
+
+                                <p>Connect with our Facebook and Twitter accounts (askBYSorg) and askBYS Calendar.
+
+                                    <p>Visit us at <a onclick="goGetWordPressForm('http://askbys.org','none')"> askBYS.org </a> for more resources and information about our organization.
+
+                                        <p>© 2016 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
+
+                                        <p>Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016 BHS AP Computer Science class:
+                                            <p>
+                                                <p>Team 1: Collapsible search results UI, research on unreachable network</p>
+                                                <ul>
+                                                    <li>Curren Hamlet</li>
+                                                    <li>Ricardo Grande Cros</li>
+                                                    <li>Chas Fordyce</li>
+                                                </ul>
+                                                <img src="images/Team1.jpg" width="80%">
+                                                <p>Team 2: Advanced Search</p>
+                                                <ul>
+                                                    <li>Alyssa Gangi</li>
+                                                    <li>Keaton Blair</li>
+                                                    <li>Elijah Burns</li>
+                                                    <li>Jeremy Lipschutz</li>
+                                                </ul>
+                                                <img src="images/Team2.jpg" width="80%">
+                                                <p>Team 3: Local application integration, new icons, calendar access</p>
+                                                <ul>
+                                                    <li>Cooper Sprague</li>
+                                                    <li>Sebastian Batali</li>
+                                                    <li>Leilani Tuinukuafe</li>
+                                                    <li>John Zhang</li>
+                                                </ul>
+                                                <img src="images/Team3.jpg" width="80%">
+                                                <p>Team 4: New UI css, splash screens and screen shots</p>
+                                                <ul>
+                                                    <li>Ryan Cox</li>
+                                                    <li>Shelby Sundquist</li>
+                                                    <li>Sam Holzer</li>
+                                                    <li>John Michael Najarian</li>
+                                                </ul>
+                                                <img src="images/Team4.jpg" width="80%">
+
+        </div>
+
+    </div>
+    <script>
+        // open win and turn off location and Kirk update 1
             //info on fallback - http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
             
             function checkAppSupport(appList,availURL,unavailURL,appDetect){
@@ -213,10 +175,8 @@
         //ref.close();
         //}
         //});
-            </script>
+    </script>
 
+</body>
 
-
-            </body>
 </html>
-
