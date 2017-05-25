@@ -37,3 +37,14 @@ var mycallback = function(data) {
     $('div[data-role=collapsible]').collapsible();
 }
 loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback'); //use jsonp callback facility to output json from our jsonp test page
+function goGetWordPressForm(url) {
+    return window.open(url, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
+}
+
+function goGetWordPressFormInjectCSS(url) {
+    goGetWordPressForm(url).addEventListener('loadstop', function() {
+        this.insertCSS({
+            file: 'styles/wp-contact7.css'
+        })
+    })
+}
