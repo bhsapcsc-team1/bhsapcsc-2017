@@ -45,7 +45,9 @@
                   'drugs-alcohol': 'Drugs and Alcohol'
                 }
 
-                document.querySelector('h2').textContent = names[query.category] || capitalize(query.category)
+                var name = names[query.category] || capitalize(query.category)
+                document.querySelector('h2').textContent = name
+                document.title += ' \u2014 ' + name
 
                 var loadJSONP = function ( url, callback ) {
                         // Create script with url and callback (if specified)
