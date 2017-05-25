@@ -39,7 +39,13 @@
                   }, {})
                 }
 
-                document.querySelector('h2').textContent = query.category
+                function capitalize (s) { return s[0].toUpperCase() + s.slice(1) }
+
+                var names = {
+                  'drugs-alcohol': 'Drugs and Alcohol'
+                }
+
+                document.querySelector('h2').textContent = names[query.category] || capitalize(query.category)
 
                 var loadJSONP = function ( url, callback ) {
                         // Create script with url and callback (if specified)
@@ -87,11 +93,4 @@
         ref.insertCSS({file: "styles/wp-contact7.css"});
                              });
     };
-    // attach listener to loadstart
-    //ref.addEventListener('loadstart', function(event) {
-    //var urlSuccessPage = "http://myloginapp/success/";
-    //if (event.url == urlSuccessPage) {
-    //ref.close();
-    //}
-    //});
 </script>
