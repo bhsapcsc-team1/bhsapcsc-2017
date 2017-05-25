@@ -75,15 +75,13 @@
 </html>
 
 <script>
-    // open win and turn off location
-    function goGetWordPressForm(WPUrl) {
-        var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-    };
-    // open win and turn off location
-    function goGetWordPressFormInjectCSS(WPUrl) {
-        var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-        ref.addEventListener('loadstop', function() {
-        ref.insertCSS({file: "styles/wp-contact7.css"});
-                             });
-    };
+    function goGetWordPressForm (url) {
+        return window.open(url, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
+    }
+    
+    function goGetWordPressFormInjectCSS (url) {
+      goGetWordPressForm(url).addEventListener('loadstop', function () {
+        this.insertCSS({ file: 'styles/wp-contact7.css' })
+      })
+    }
 </script>
