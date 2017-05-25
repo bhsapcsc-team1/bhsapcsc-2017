@@ -49,18 +49,9 @@
                 document.querySelector('h2').textContent = name
                 document.title += ' \u2014 ' + name
 
-                var loadJSONP = function ( url, callback ) {
-                        // Create script with url and callback (if specified)
-                        var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
-                        var script = window.document.createElement( 'script' );
-                        script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
-                        // Insert script tag into the DOM (append to <head>)
-                        ref.parentNode.insertBefore( script, ref );
-                        // After the script is loaded (and executed), remove it
-                        script.onload = function () {
-                            this.remove();
-                        };
-                    };
+                function loadJSONP (url, callback) {
+                  $.getScript(url + (/\?/.test(url)?'&':'?') + 'callback=' + callback)
+                }
                     var mycallback = function ( data )
                     {
                       $.each(data,  function(index, s)
