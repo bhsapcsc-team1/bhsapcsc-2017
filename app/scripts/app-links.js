@@ -32,13 +32,14 @@ Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-a
 
 document.addEventListener('deviceready', function () {
 
-  alert('test')
+  alert(appAvailability in window ? 'appAvailability present' : 'appAvailability absent')
   var platform = /iPhone/i.test(navigator.userAgent) ? 'ios' : /Android/i.test(navigator.userAgent) ? 'android' : ''
 
   var cache = {}
 
   $('a[target="_blank"]').each(function (anchor) {
     function setAvailability (value) {
+      alert('Setting app-available for ' + anchor.href + ' to ' + value + '(app = ' + app ')')
       anchor.setAttribute('data-app-available', cache[app] = value)
     }
     var appLink = anchor.getAttribute('data-app-link')
