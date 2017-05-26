@@ -14,6 +14,7 @@
     <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
     <script src="scripts/libs/jquery.pageset.js"></script>
     <script src="cordova.js"></script>
+    <script defer src="scripts/app-links.js"></script>
 
 </head>
 
@@ -35,147 +36,57 @@
                 <img src="images/askbys.png" width="60%">
             </div>
             <br>
-            <p>askBYS is a service of Bainbridge Youth Services (BYS), a 50 year old organization whose mission is to promote the social and emotional well being of teens and their families.
-                <p>With the askBYS app you can:
+            <p>askBYS is a service of Bainbridge Youth Services (BYS), a 50 year old organization whose mission is to promote the social and emotional well being of teens and their families.</p>
 
-                    <p>Make an appointment request with a BYS therapist (we are located in Bainbridge Island, WA).
+            <p>With the askBYS app you can:
+                <ul>
+                    <li>Request an in-person appointment with a BYS therapist (we are located in Bainbridge Island, WA).</li>
+                    <li>Ask questions anonymously to BYS therapists and medical doctors.</li>
+                    <li>Read selected questions raised by other teens and see responses given by BYS.</li>
+                    <li>Connect with us on social media via Facebook, Twitter, and Google Calendar.</li>
+                </ul>
+            </p>
+            <p>Visit us at <a href="http://askbys.org" target="_blank"> askBYS.org </a> for more resources and information about our organization.</p>
 
-                        <p>Ask questions to BYS therapists and medical doctors.
+            <p>&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
 
-                            <p>Read questions posed by other teens and answers given by BYS.
-
-                                <p>Connect with our Facebook and Twitter accounts (askBYSorg) and askBYS Calendar.
-
-                                    <p>Visit us at <a onclick="goGetWordPressForm('http://askbys.org','none')"> askBYS.org </a> for more resources and information about our organization.
-
-                                        <p>© 2016 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
-
-                                        <p>Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016 BHS AP Computer Science class:
-                                            <p>
-                                                <p>Team 1: Collapsible search results UI, research on unreachable network</p>
-                                                <ul>
-                                                    <li>Curren Hamlet</li>
-                                                    <li>Ricardo Grande Cros</li>
-                                                    <li>Chas Fordyce</li>
-                                                </ul>
-                                                <img src="images/Team1.jpg" width="80%">
-                                                <p>Team 2: Advanced Search</p>
-                                                <ul>
-                                                    <li>Alyssa Gangi</li>
-                                                    <li>Keaton Blair</li>
-                                                    <li>Elijah Burns</li>
-                                                    <li>Jeremy Lipschutz</li>
-                                                </ul>
-                                                <img src="images/Team2.jpg" width="80%">
-                                                <p>Team 3: Local application integration, new icons, calendar access</p>
-                                                <ul>
-                                                    <li>Cooper Sprague</li>
-                                                    <li>Sebastian Batali</li>
-                                                    <li>Leilani Tuinukuafe</li>
-                                                    <li>John Zhang</li>
-                                                </ul>
-                                                <img src="images/Team3.jpg" width="80%">
-                                                <p>Team 4: New UI css, splash screens and screen shots</p>
-                                                <ul>
-                                                    <li>Ryan Cox</li>
-                                                    <li>Shelby Sundquist</li>
-                                                    <li>Sam Holzer</li>
-                                                    <li>John Michael Najarian</li>
-                                                </ul>
-                                                <img src="images/Team4.jpg" width="80%">
+            <p>Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS:</p>
+            <p>
+                <p>Team 1: Collapsible search results UI, research on unreachable network</p>
+                <ul>
+                    <li>Curren Hamlet</li>
+                    <li>Ricardo Grande Cros</li>
+                    <li>Chas Fordyce</li>
+                </ul>
+                <img src="images/Team1.jpg" width="80%">
+                <p>Team 2: Advanced Search</p>
+                <ul>
+                    <li>Alyssa Gangi</li>
+                    <li>Keaton Blair</li>
+                    <li>Elijah Burns</li>
+                    <li>Jeremy Lipschutz</li>
+                </ul>
+                <img src="images/Team2.jpg" width="80%">
+                <p>Team 3: Local application integration, new icons, calendar access</p>
+                <ul>
+                    <li>Cooper Sprague</li>
+                    <li>Sebastian Batali</li>
+                    <li>Leilani Tuinukuafe</li>
+                    <li>John Zhang</li>
+                </ul>
+                <img src="images/Team3.jpg" width="80%">
+                <p>Team 4: New UI css, splash screens and screen shots</p>
+                <ul>
+                    <li>Ryan Cox</li>
+                    <li>Shelby Sundquist</li>
+                    <li>Sam Holzer</li>
+                    <li>John Michael Najarian</li>
+                </ul>
+                <img src="images/Team4.jpg" width="80%">
 
         </div>
 
     </div>
-    <script>
-        // open win and turn off location and Kirk update 1
-            //info on fallback - http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
-            
-            function checkAppSupport(appList,availURL,unavailURL,appDetect){
-                var k = appList.pop();
-                var goURL = availURL[k];
-                var stopURL = unavailURL[k];
-                var checkScheme = appDetect[k];
-                appAvailability.check(checkScheme,
-                                      function() {  // Success callback
-                                      document.myAppUrls[k] = goURL;
-                                      // console.log("Success Callback " + k);
-                                      if(appList.length>0){
-                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
-                                      }
-                                      },
-                                      function() {  // Error callback
-                                      document.myAppUrls[k] = stopURL;
-                                      // console.log("Failure Callback " + k);
-                                      if(appList.length>0){
-                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
-                                      }
-                                      }
-                                      );
-            }
-        
-        function onDeviceReady(){
-            document.myAppUrls = {};
-            console.log("onDeviceReady");
-            
-            var appCheck = {};
-            var appPresentUrl = {};
-            var appAbsentUrl = {};
-            
-            if(navigator.userAgent.match(/iPhone/i))
-            {
-                appCheck.twitter = "twitter://";
-                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
-                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
-                appCheck.fb = "facebook://";
-                //appPresentUrl.fb = "fb://page/600914096651234"; May not work with ios 9
-                //Kirk trying something new
-                appPresentUrl.fb = "https://www.facebook.com/230144303829183";
-                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
-                checkAppSupport(["twitter"],appPresentUrl,appAbsentUrl,appCheck);
-            }
-            else if(navigator.userAgent.match(/Android/i))
-            {
-                appCheck.twitter = "com.twitter.android";
-                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
-                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
-                appCheck.fb = "com.facebook.katana";
-                //Still not sure what the corrrect fb link to app is... May need to use intents
-                appPresentUrl.fb = "fb://page/230144303829183";
-                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
-                checkAppSupport(["twitter","fb"],appPresentUrl,appAbsentUrl,appCheck);
-            }
-            
-        }
-        
-        document.addEventListener('deviceready', onDeviceReady, false);
-        
-        function goGetWordPressForm(WPUrl, scheme) {
-            var launchStr
-            launchStr = document.myAppUrls[scheme];
-            if (!launchStr){
-                window.open(WPUrl, '_blank',
-                            'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-            } else {
-                // console.log("window.open " + launchStr);
-                window.open(launchStr,'_system');
-            }
-        }
-        // open win and turn off location
-        //function goGetWordPressFormInjectCSS(WPUrl) {
-        //    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-        //    ref.addEventListener('loadstop', function() {
-        //    ref.insertCSS({file: "styles/wp-contact7.css"});
-        //                         });
-        //};
-        // attach listener to loadstart
-        //ref.addEventListener('loadstart', function(event) {
-        //var urlSuccessPage = "http://myloginapp/success/";
-        //if (event.url == urlSuccessPage) {
-        //ref.close();
-        //}
-        //});
-    </script>
 
 </body>
 

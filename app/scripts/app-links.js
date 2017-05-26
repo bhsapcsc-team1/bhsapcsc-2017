@@ -46,12 +46,11 @@ document.addEventListener('deviceready', function () {
       if (app in cache) setAvailability(cache[app])
       else appAvailability.checkBool(app, setAvailability)
     }
-    anchor.addEventListener('click', navigate)
   })
 
 }, false)
 
-function navigate (event) {
+$('a[target="_blank"]').on('click', function navigate (event) {
   var anchor = event.target
   if (anchor.getAttribute('data-app-available') === 'true') {
     window.open(anchor.getAttribute('data-app-link'), '_system')
@@ -59,4 +58,4 @@ function navigate (event) {
     window.open(anchor.href, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
   }
   return false
-}
+})
