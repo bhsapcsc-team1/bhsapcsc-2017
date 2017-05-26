@@ -32,6 +32,7 @@ Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-a
 
 document.addEventListener('deviceready', function () {
 
+  alert('test')
   var platform = /iPhone/i.test(navigator.userAgent) ? 'ios' : /Android/i.test(navigator.userAgent) ? 'android' : ''
 
   var cache = {}
