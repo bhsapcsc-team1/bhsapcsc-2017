@@ -82,7 +82,7 @@ label small {
 	padding: 1.8em;
 	text-align:center;
   border-style: solid;
-  border-color: #04604a;
+  border-color: #056f55;
   border-width: 1px;
   text-shadow: 0 1px 0 #444444;
 	height: 90px;
@@ -90,6 +90,22 @@ label small {
   font-family: 'cabin', sans-serif;
   font-weight: bold;
 }
+.main-page-dividers:active{
+  background-color: #292562;
+  border-color: #393389;
+}
+.main-page-dividers:hover{
+  background-color: #0aca9b;
+  border-color: #056f55;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #444444;
+   -webkit-box-shadow: 0 0 12px #292562;
+    -moz-box-shadow: 0 0 12px #292562;
+    box-shadow: 0 0 12px #292562;
+
+
+}
+
 
 /*Start of new css for social menu
 -----------------------------------------------------------------------------------------------------------*/
@@ -100,6 +116,9 @@ label small {
 	align-content: center;
 	margin-top: 1.5%;
 	padding: .8em; 
+  border-style: solid;
+  border-color: #056f55;
+  border-width: 1px;
 
 }
 #center-social{
