@@ -69,7 +69,7 @@ label small {
 -----------------------------------------------------------------------------------------------------------*/
 .row-dividers .main-page-dividers{
 
-	width: 29%;
+	width: 35%;
 	margin-bottom: 3%;
 	background-color: #d3d3d3;
 	display: inline-block;
@@ -83,14 +83,10 @@ label small {
 	font-size:1.1em;
 	font-weight: bold;
 	height: 90px;
-	position: relative;
 	line-height: 500%;
 }
 
-.main-page-dividers a{
-	margin-top: 35%;
 
-}
 
 .social-bar-bottom{
 	background-color: #d3d3d3;
@@ -100,8 +96,6 @@ label small {
 
 }
 #center-social{
-	align-content: center;
-	display:block;
 	text-align: -webkit-center;
 }
 .social-bar-bottom #center-social img{
