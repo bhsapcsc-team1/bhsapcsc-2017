@@ -68,28 +68,35 @@ label small {
 /*Start of new css for tile index format
 -----------------------------------------------------------------------------------------------------------*/
 .row-dividers .main-page-dividers{
-
+  color:#FFFFFF;
 	width: 35%;
 	margin-bottom: 3%;
-	background-color: #d3d3d3;
+	background-color: #09b087;
 	display: inline-block;
 	margin-top: 2%;
+
 
 }
 
 .main-page-dividers{
 	padding: 1.8em;
 	text-align:center;
-	font-size:1.1em;
-	font-weight: bold;
+  border-style: solid;
+  border-color: #04604a;
+  border-width: 1px;
+  text-shadow: 0 1px 0 #444444;
 	height: 90px;
 	line-height: 500%;
+  font-family: 'cabin', sans-serif;
+  font-weight: bold;
 }
 
+/*Start of new css for social menu
+-----------------------------------------------------------------------------------------------------------*/
 
 
 .social-bar-bottom{
-	background-color: #d3d3d3;
+	background-color: #09b087;
 	align-content: center;
 	margin-top: 1.5%;
 	padding: .8em; 
@@ -101,3 +108,4 @@ label small {
 .social-bar-bottom #center-social img{
 	padding-left:2%;
 }
+
