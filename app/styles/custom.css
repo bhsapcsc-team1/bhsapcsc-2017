@@ -103,10 +103,7 @@ label small {
    -webkit-box-shadow: 0 0 12px #292562;
     -moz-box-shadow: 0 0 12px #292562;
     box-shadow: 0 0 12px #292562;
-
-
 }
-
 
 /*Start of new css for social menu
 -----------------------------------------------------------------------------------------------------------*/
@@ -128,21 +125,16 @@ label small {
 	padding-left:2%;
 }
 
-
 /*Start of new css for side-bar menu
 -----------------------------------------------------------------------------------------------------------*/
 
 .side-menu-option{
   color: #000000;
-  margin-left: 5%;
-  padding-left: 5%;
-  padding: 5%;
+  margin-left: 2%;
+  padding: 3% 5% 3% 5%;
   font-weight: normal;
+}
 
-}
-.side-bar-option{
-  color: #000000;
-}
 .side-menu-option:hover{
   background-color: #0aca9b;
   text-shadow: 0 0px 0 #444444;
