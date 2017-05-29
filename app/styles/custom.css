@@ -69,7 +69,7 @@ label small {
 -----------------------------------------------------------------------------------------------------------*/
 .row-dividers .main-page-dividers{
   color:#FFFFFF;
-	width: 35%;
+	width: 20%;
 	margin-bottom: 3%;
 	background-color: #09b087;
 	display: inline-block;
@@ -86,9 +86,9 @@ label small {
   border-width: 1px;
   text-shadow: 0 1px 0 #444444;
 	height: 90px;
-	line-height: 500%;
   font-family: 'cabin', sans-serif;
   font-weight: bold;
+  vertical-align: middle;
 }
 .main-page-dividers:active{
   background-color: #292562;
