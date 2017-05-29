@@ -84,11 +84,11 @@ label small {
   border-color: #056f55;
   border-width: 1px;
   text-shadow: 0 1px 0 #444444;
-	height: 90px;
+	height: 88px;
   font-family: 'cabin', sans-serif;
   font-weight: bold;
   vertical-align: middle;
-  line-height: 90px;
+  line-height: 88px;
 
 }
 .main-page-dividers:active{
@@ -130,16 +130,13 @@ label small {
 
 .side-menu-option{
   color: #000000;
-  margin-left: 2%;
-  padding: 3% 5% 3% 5%;
+  padding: 5%;
   font-weight: normal;
 }
 
 .side-menu-option:hover{
   background-color: #0aca9b;
   text-shadow: 0 0px 0 #444444;
-   -webkit-box-shadow: 0 0 1em #292562;
-    -moz-box-shadow: 0 0 1em #292562;
-    box-shadow: 0 0 12px #292562;
   font-weight: normal;
+  color: #ffffff;
 }
