@@ -46,7 +46,7 @@ document.addEventListener('deviceready', function () {
 
   var cache = {}
   
-  $('a[target="_blank"]').forEach(function (anchor) {
+  $('a[target="_blank"]').each(function (_, anchor) {
      
     var appLink = anchor.getAttribute('data-app-link')
     var app = anchor.getAttribute('data-'+platform+'-app')
