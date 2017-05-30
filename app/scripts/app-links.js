@@ -35,6 +35,10 @@ document.addEventListener('deviceready', function () {
    appAvailability.checkBool('com.twitter.android', function (b) {
       alert('twitter: ' + b)
    })
+   
+   appAvailability.checkBool('com.derp.android', function (b) {
+      alert('derp: ' + b + ' ' + b.length)
+   })
 
   var platform = device.platform.toLowerCase()
 
