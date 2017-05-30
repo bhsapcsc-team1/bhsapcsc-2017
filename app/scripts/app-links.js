@@ -46,7 +46,12 @@ document.addEventListener('deviceready', function () {
 
   var cache = {}
   
-  alert($('a[target="_blank"]').length)
+  $('a[target="_blank"]').forEach(function (e) {
+     
+    var appLink = anchor.getAttribute('data-app-link')
+    var app = anchor.getAttribute('data-'+platform+'-app')
+    alert([e, appLink, app])
+  })
 
   $('a[target="_blank"]').each(function (_, anchor) {
     function setAvailability (value) {
