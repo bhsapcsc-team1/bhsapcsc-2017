@@ -66,6 +66,14 @@
             </div>
 
         </div>
+        
+        <script>
+            appAvailability.check('com.twitter.android', function () {
+                alert('Twitter! :)')
+            }, function () {
+                alert('No twitter :(')  
+            })
+        </script>
 
         <!--Panel-->
         <div data-role="panel" id="myPanel">
