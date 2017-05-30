@@ -46,11 +46,11 @@ document.addEventListener('deviceready', function () {
 
   var cache = {}
   
-  $('a[target="_blank"]').forEach(function (e) {
+  $('a[target="_blank"]').forEach(function (anchor) {
      
     var appLink = anchor.getAttribute('data-app-link')
     var app = anchor.getAttribute('data-'+platform+'-app')
-    alert([e, appLink, app])
+    alert([anchor, appLink, app])
   })
 
   $('a[target="_blank"]').each(function (_, anchor) {
