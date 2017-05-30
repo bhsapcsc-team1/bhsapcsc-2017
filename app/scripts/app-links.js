@@ -51,6 +51,7 @@ document.addEventListener('deviceready', function () {
     }
     var appLink = anchor.getAttribute('data-app-link')
     var app = anchor.getAttribute('data-'+platform+'-app')
+    alert('Doing stuff involving ' + anchor.href + '; appLink = ' + appLink + '; attributes = ' + anchor.getAttributes().join())
     if (appLink && app) {
       if (app in cache) setAvailability(cache[app])
       else appAvailability.checkBool(app, setAvailability)
