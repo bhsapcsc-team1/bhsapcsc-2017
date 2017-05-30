@@ -33,26 +33,11 @@ Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-a
 document.addEventListener('deviceready', function () {
    
    $(function () {
-   
-   appAvailability.checkBool('com.twitter.android', function (b) {
-      alert('twitter: ' + b)
-   })
-   
-   appAvailability.checkBool('com.derp.android', function (b) {
-      alert('derp: ' + b + ' ' + b.length)
-   })
 
   var platform = device.platform.toLowerCase()
 
   var cache = {}
   
-  $('a[target="_blank"]').each(function (_, anchor) {
-     
-    var appLink = anchor.getAttribute('data-app-link')
-    var app = anchor.getAttribute('data-'+platform+'-app')
-    alert([anchor, appLink, app])
-  })
-
   $('a[target="_blank"]').each(function (_, anchor) {
     function setAvailability (value) {
       alert('Setting app-available for ' + anchor.href + ' to ' + !!value + '(app = ' + app + ')')
