@@ -29,39 +29,38 @@ Apparently, Facebook is difficult: https://stackoverflow.com/questions/4810803/o
 Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
 
 */
+document.addEventListener('deviceready', function() {
 
-document.addEventListener('deviceready', function () {
-   
-   $(function () {
+    $(function() {
 
-  var platform = device.platform.toLowerCase()
+        var platform = device.platform.toLowerCase()
 
-  var cache = {}
-  
-  $('a[target="_blank"]').each(function (_, anchor) {
-    function setAvailability (value) {
-      alert('Setting app-available for ' + anchor.href + ' to ' + !!value + '(app = ' + app + ')')
-      anchor.setAttribute('data-app-available', cache[app] = !!value)
-    }
-    var appLink = anchor.getAttribute('data-app-link')
-    var app = anchor.getAttribute('data-'+platform+'-app')
-    //alert('Doing stuff involving ' + anchor.href + '; appLink = ' + appLink + '; app = ' + app)
-    if (appLink && app) {
-      if (app in cache) setAvailability(cache[app])
-      else appAvailability.checkBool(app, setAvailability)
-    }
-  })
-      
-   })
+        var cache = {}
+
+        $('a[target="_blank"]').each(function(_, anchor) {
+            function setAvailability(value) {
+                alert('Setting app-available for ' + anchor.href + ' to ' + !!value + ' (app = ' + app + ')')
+                anchor.setAttribute('data-app-available', cache[app] = !!value)
+            }
+            var appLink = anchor.getAttribute('data-app-link')
+            var app = anchor.getAttribute('data-' + platform + '-app')
+                //alert('Doing stuff involving ' + anchor.href + '; appLink = ' + appLink + '; app = ' + app)
+            if (appLink && app) {
+                if (app in cache) setAvailability(cache[app])
+                else appAvailability.checkBool(app, setAvailability)
+            }
+        })
+
+    })
 
 }, false)
 
-$('a[target="_blank"]').on('click', function navigate (event) {
-  var anchor = this
-  if (anchor.getAttribute('data-app-available') === 'true') {
-    window.open(anchor.getAttribute('data-app-link'), '_system')
-  } else {
-    window.open(anchor.href, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
-  }
-  event.preventDefault()
+$('a[target="_blank"]').on('click', function navigate(event) {
+    var anchor = this
+    if (anchor.getAttribute('data-app-available') === 'true') {
+        window.open(anchor.getAttribute('data-app-link'), '_system')
+    } else {
+        window.open(anchor.href, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
+    }
+    event.preventDefault()
 })
