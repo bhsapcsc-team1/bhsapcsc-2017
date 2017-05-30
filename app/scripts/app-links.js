@@ -43,6 +43,8 @@ document.addEventListener('deviceready', function () {
   var platform = device.platform.toLowerCase()
 
   var cache = {}
+  
+  alert($('a[target="_blank"]').length)
 
   $('a[target="_blank"]').each(function (_, anchor) {
     function setAvailability (value) {
