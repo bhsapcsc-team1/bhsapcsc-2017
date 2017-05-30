@@ -112,7 +112,7 @@ label small {
 	background-color: #09b087;
 	align-content: center;
 	margin-top: 1.5%;
-	padding: .5em; 
+	padding: .5em;
   border-style: solid;
   border-color: #056f55;
   border-width: 1px;
@@ -141,7 +141,7 @@ label small {
   color: #ffffff;
 }
 
-/*Start of new css for scrolling teams 
+/*Start of new css for scrolling teams
 -----------------------------------------------------------------------------------------------------------*/
 #all-containers *{
 margin:0;
@@ -152,11 +152,7 @@ outline:0;
 #scroll {
 width:max;
 height:500px;
-margin:30px auto; 
-background:#A3CBE0; 
-/* border:2px solid #000;
-box-shadow:0 0 10px #000;
-*/
+margin:30px auto;
 overflow:auto;
 scroll-snap-points-x: repeat(465px);
 scroll-snap-type: mandatory;
@@ -169,14 +165,11 @@ list-style:none;
 
 }
 #scroll li {
-display:table-cell; 
-text-align:center;   
+display:table-cell;
+text-align:center;
 }
 
 #scroll img {
-/*min-width: 80%;
-max-width: 450px;
-*/
 margin:8px 10px 0 10px;
 
 }
@@ -194,10 +187,8 @@ margin:8px 10px 0 10px;
 padding:0 0 5px 0;
 display:block;
 }
-/*Start of new css for copyright font 
+/*Start of new css for copyright font
 -----------------------------------------------------------------------------------------------------------*/
 #myPanel .copyright{
   font-size: .8em;
 }
-
-
