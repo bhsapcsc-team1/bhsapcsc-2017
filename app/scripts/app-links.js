@@ -32,14 +32,11 @@ Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-a
 
 document.addEventListener('deviceready', function () {
    
-   appAvailability.check('com.twitter.android', function () {
-      alert('Yes twitter')
-   }, function () {
-      alert('No twitter')  
+   appAvailability.checkBool('com.twitter.android', function (b) {
+      alert('twitter: ' + b)
    })
 
-  alert('Platform: ' + device.platform)
-  var platform = /iPhone/i.test(navigator.userAgent) ? 'ios' : /Android/i.test(navigator.userAgent) ? 'android' : ''
+  var platform = device.platform.toLowerCase()
 
   var cache = {}
 
