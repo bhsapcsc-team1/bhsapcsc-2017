@@ -55,12 +55,12 @@ document.addEventListener('deviceready', function () {
 
   $('a[target="_blank"]').each(function (_, anchor) {
     function setAvailability (value) {
-      alert('Setting app-available for ' + anchor.href + ' to ' + value + '(app = ' + app + ')')
-      anchor.setAttribute('data-app-available', cache[app] = value)
+      alert('Setting app-available for ' + anchor.href + ' to ' + !!value + '(app = ' + app + ')')
+      anchor.setAttribute('data-app-available', cache[app] = !!value)
     }
     var appLink = anchor.getAttribute('data-app-link')
     var app = anchor.getAttribute('data-'+platform+'-app')
-    alert('Doing stuff involving ' + anchor.href + '; appLink = ' + appLink + '; app = ' + app)
+    //alert('Doing stuff involving ' + anchor.href + '; appLink = ' + appLink + '; app = ' + app)
     if (appLink && app) {
       if (app in cache) setAvailability(cache[app])
       else appAvailability.checkBool(app, setAvailability)
