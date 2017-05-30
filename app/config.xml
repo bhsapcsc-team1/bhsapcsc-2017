@@ -108,6 +108,7 @@
     
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-appavailability" source="npm" />
+    <plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-disable-nsapptransportsecurity" source="npm" />
     
