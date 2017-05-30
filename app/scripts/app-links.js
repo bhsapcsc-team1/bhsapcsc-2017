@@ -22,10 +22,6 @@ One nice side effect of this system is that app links become self-documenting:
   Facebook
 </a>
 
-This script still needs testing; PhoneGap wasn't working last time I tried.
-
-Apparently, Facebook is difficult: https://stackoverflow.com/questions/4810803/open-facebook-page-from-android-app
-
 Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
 
 */
