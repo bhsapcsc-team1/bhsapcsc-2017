@@ -32,6 +32,8 @@ Original Info: http://stackoverflow.com/questions/23095906/how-to-open-twitter-a
 
 document.addEventListener('deviceready', function () {
    
+   $(function () {
+   
    appAvailability.checkBool('com.twitter.android', function (b) {
       alert('twitter: ' + b)
    })
@@ -59,6 +61,8 @@ document.addEventListener('deviceready', function () {
       else appAvailability.checkBool(app, setAvailability)
     }
   })
+      
+   })
 
 }, false)
 
