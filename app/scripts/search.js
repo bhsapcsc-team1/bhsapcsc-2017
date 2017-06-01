@@ -8,7 +8,7 @@ function parseQueryString(qs) {
             value = entry[1]
         result[key] = value == null ? null : value
         return result
-    }, {})
+    }, Object.create(null))
 }
 
 function capitalize(s) {
