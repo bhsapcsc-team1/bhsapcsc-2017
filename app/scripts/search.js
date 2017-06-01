@@ -28,8 +28,7 @@ function loadJSONP(url, callback) {
 }
 
 function mycallback (posts) {
-    $('#demo').append(posts.map(renderPost))
-    $('.selected-story').collapsible()
+    $(posts.map(renderPost)).appendTo('#demo').collapsible()
 }
 
 function renderPost (post) {
@@ -40,7 +39,7 @@ function renderPost (post) {
             $('<p>', { text: post.post_content }),
             '<h4>Response:</h4>',
             $('<p>', { text: post.comment_content })
-        )
+        )[0]
 }
 
 loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
