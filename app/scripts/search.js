@@ -41,5 +41,3 @@ function renderPost (post) {
             $('<p>', { text: post.comment_content })
         )[0]
 }
-
-loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
