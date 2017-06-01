@@ -26,14 +26,21 @@ document.title += ' \u2014 ' + name
 function loadJSONP(url, callback) {
     $.getScript(url + (/\?/.test(url) ? '&' : '?') + 'callback=' + callback)
 }
-var mycallback = function(data) {
-    $.each(data, function(index, s) {
-        $('#demo').append('<div data-role="collapsible" id="' + s.id + '"></div>')
-        var content = '<h3>' + s.title + '</h3>' +
-            '<p><strong>Question:</strong><br/>' + s.post_content +
-            '<p><strong>Response:</strong><br/>' + s.comment_content + '</p></p>';
-        $('#' + s.id).append(content);
-    })
+
+function renderPosts (posts) {
+    $('#demo').append(posts.map(renderPost))
     $('div[data-role=collapsible]').collapsible()
 }
-loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
+
+function renderPost (post) {
+    return $('<article>', { 'data-role': 'collapsible', 'id': post.id })
+        .append(
+            $('<h3>', { text: post.title }),
+            '<h4>Question</h4>',
+            $('<p>', { text: post.post_content }),
+            '<h4>Response:</h4>',
+            $('<p>', { text: post.comment_content })
+        )
+}
+
+loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'renderPosts')
