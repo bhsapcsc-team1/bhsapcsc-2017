@@ -29,11 +29,11 @@ function loadJSONP(url, callback) {
 
 function mycallback (posts) {
     $('#demo').append(posts.map(renderPost))
-    $('div[data-role=collapsible]').collapsible()
+    $('.selected-story').collapsible()
 }
 
 function renderPost (post) {
-    return $('<article>', { 'data-role': 'collapsible', 'id': post.id })
+    return $('<article>', { 'class': 'selected-story', 'id': post.id })
         .append(
             $('<h3>', { text: post.title }),
             '<h4>Question</h4>',
