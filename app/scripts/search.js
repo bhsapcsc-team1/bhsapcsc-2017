@@ -34,17 +34,6 @@ var mycallback = function(data) {
             '<p><strong>Response:</strong><br/>' + s.comment_content + '</p></p>';
         $('#' + s.id).append(content);
     })
-    $('div[data-role=collapsible]').collapsible();
+    $('div[data-role=collapsible]').collapsible()
 }
-loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback'); //use jsonp callback facility to output json from our jsonp test page
-function goGetWordPressForm(url) {
-    return window.open(url, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve')
-}
-
-function goGetWordPressFormInjectCSS(url) {
-    goGetWordPressForm(url).addEventListener('loadstop', function() {
-        this.insertCSS({
-            file: 'styles/wp-contact7.css'
-        })
-    })
-}
+loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
