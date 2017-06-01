@@ -27,7 +27,7 @@ function loadJSONP(url, callback) {
     $.getScript(url + (/\?/.test(url) ? '&' : '?') + 'callback=' + callback)
 }
 
-function renderPosts (posts) {
+function mycallback (posts) {
     $('#demo').append(posts.map(renderPost))
     $('div[data-role=collapsible]').collapsible()
 }
@@ -43,4 +43,4 @@ function renderPost (post) {
         )
 }
 
-loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'renderPosts')
+loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
