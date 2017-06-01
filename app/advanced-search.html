@@ -23,83 +23,22 @@
                 
                 
                 <div class="ui-field-contain">
-                    <form id="SearchForm" onsubmit="return submitForm();">
-                        <input type="search" name="search" id="searchTxt" placeholder="askBYS posts...">
-                        <input type="submit" name="submit" value="Submit" /><br />
+                    <form id="search-form">
+                        <input type="search" name="search" id="search" placeholder="askBYS posts...">
+                        <input type="submit"/><br />
                         <div class="form_result"> </div>
                     </form>
-
-
                 </div>
                 
-               <p data-role="collapsible-set" id="demo"></p>
-                
+               <div data-role="collapsible-set" id="demo"></div>
+                <script src="scripts/search.js"></script>
                 <script type="text/javascript">
-                    
-                    function submitForm() {
-                        $('#demo div').empty(); 
-                        var searchValue = $( "#searchTxt" ).val();
-                        var urltocall = "https://askbys.org/askbysmobile/MobileWPSearchwithitem.php?search=" + searchValue;
-                        loadJSONP( urltocall, 'mycallback' );
-                        //$.ajax({type:'POST', url: 'https://askbys.org/askbysmobile/MobileWPSearchwithitem.php', data:$('#SearchForm').serialize(), success: function(response) {
-                              // $('#SearchForm').find('.form_result').html(response);
-                               //}});
-                               
-                               return false;
-                    }
-                    
-                    
-                    var loadJSONP = function ( url, callback ) {
-                        
-                        // Create script with url and callback (if specified)
-                        var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
-                        var script = window.document.createElement( 'script' );
-                        script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
-                        
-                        // Insert script tag into the DOM (append to <head>)
-                        ref.parentNode.insertBefore( script, ref );
-                        
-                        // After the script is loaded (and executed), remove it
-                        script.onload = function () {
-                            this.remove();
-                        };
-                        
-                    };
-                
-                var mycallback = function ( data )
-                {
-                    $.each(data,  function(index, s)
-                           {
-                           $('#demo').append('<div data-role="collapsible" data-inset="true" id="'+s.id+'"></div>')
-                           var content = '<h3>'+s.title+'</h3>'+
-                           '<p><strong>Question:</strong><br/>'+s.post_content+
-                           '<p><strong>Response:</strong><br/>'+s.comment_content+'</p></p>';
-                           $('#'+s.id).append(content);
-                           })
-                           $('div[data-role=collapsible]').collapsible();
-                }
-                //creates a listener for when you press a key
-                window.onkeyup = keyup;
-                
-                //creates a global Javascript variable
-                var inputTextValue;
-                
-                function keyup(e) {
-                    //setting your input text to the global Javascript Variable for every key press
-                    inputTextValue = e.target.value;
-                    
-                    //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
-                    if (e.keyCode == 13) {
-                        var urltocall = "https://askbys.org/askbysmobile/MobileWPSearchwithitem.php?search=" + inputTextValue;
-                        loadJSONP( urltocall, 'mycallback' );
-                        inputTextValue = "";
-                    }
-                }
-                //var input = document.getElementById("searchTxt").value;
-                
+                    $('#search-form').on('submit', function (event) {
+                        $('#demo').empty()
+                        loadJSONP('https://askbys.org/askbysmobile/MobileWPSearchwithitem.php?search=' + $('#search').val(), 'mycallback')
+                        event.preventDefault()
+                    })
                     </script>
-                <!--<a href="index.html" data-role="button" data-icon="arrow-l" data-ajax="false">Back</a> -->
-                
             </div>
         </div>
         
