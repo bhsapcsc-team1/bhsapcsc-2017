@@ -8,7 +8,7 @@ function parseQueryString(qs) {
             value = entry[1]
         result[key] = value == null ? null : value
         return result
-    }, {})
+    }, Object.create(null))
 }
 
 function capitalize(s) {
@@ -41,5 +41,3 @@ function renderPost (post) {
             $('<p>', { text: post.comment_content })
         )[0]
 }
-
-loadJSONP('https://askbys.org/askbysmobile/MobileWPSearch.php?search=' + query.category, 'mycallback')
