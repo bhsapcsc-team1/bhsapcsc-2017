@@ -114,7 +114,7 @@ label small {
 }
 
 #center-social{
-	text-align: -webkit-center;
+	text-align: center;
 }
 .social-bar-bottom #center-social img{
 	padding-left:2%;
