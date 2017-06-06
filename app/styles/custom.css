@@ -108,15 +108,11 @@ label small {
 -----------------------------------------------------------------------------------------------------------*/
 
 .social-bar-bottom{
-	background-color: #09b087;
 	align-content: center;
 	margin-top: 1.5%;
 	padding: .5em;
-  border-style: solid;
-  border-color: #056f55;
-  border-width: 1px;
-
 }
+
 #center-social{
 	text-align: -webkit-center;
 }
