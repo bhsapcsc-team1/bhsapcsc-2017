@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
+            <title>Bainbridge Youth Services</title>
+            <link rel="stylesheet" href="styles/BYSMobile.min.css" />
+            <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="styles/custom.css" />
+            <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css" />
+            <link rel="stylesheet" href="styles/font-awesome.min.css" />
+            <script src="scripts/libs/jquery-1.11.1.min.js"></script>
+            <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+            <script src="scripts/libs/jquery.pageset.js"></script>
+            <script src="cordova.js"></script>
+            
+</head>
+    <body id="index">
+        <div data-role="page" id="home" data-theme="a" >
+            <div data-role="content" data-theme="a">
+                <a href="index.html" data-ajax="false" data-role="button" data-icon="arrow-l" data-iconpos="notext"></a>
+                
+                <div class="text-center">
+                    <img src="images/askbys.png"/>
+                </div>
+                
+                <br>
+                <form> 
+<h4>ACTIVITY SCHEDULE<br>
+TUESDAY – FRIDAY </h4>
+Period 0 - 7:35 – 8:30 (55)<br>
+Period 1 or 2 - 8:35 – 9:30 (55)<br>
+Activity - 9:35 – 10:25 (50)<br>
+Passing - 10:25 – 10:30 (5)<br>
+Period 1 or 2 - 10:30 – 11:10 (40)<br>
+Passing - 11:10 – 11:15 (5)<br>
+1st Lunch<br>
+Period 3 or 4 - 11:15 – 11:55 (40)<br>
+1st Lunch - 11:55 - 12:25 (30)<br>
+Passing - 12:25 – 12:30 (5)<br>
+Period 3 or 4 - 12:30 – 1:20 (50)<br>
+Passing - 1:20 – 1:25 (5)<br>
+2nd Lunch<br>
+Period 3 or 4 - 11:15 – 12:50 (95)<br>
+2nd Lunch - 12:50 – 1:20 (30)<br>
+Passing - 1:20 – 1:25 (5)<br>
+Period 5 or 6 - 1:25 – 3:00 (95)<br>
+                </form>
+                                             
+                                                              
+                <br>
+                <br>
+                                
+                <!--buttons-->
+                <div align="center">
+                    <img src="images/Twitterbird.png" height="30" width="30" onclick="goGetWordPressForm('http://twitter.com/askbysorg','twitter')"> &nbsp; &nbsp;
+                    <img src="images/Transparent-Facebook-Logo-Icon.png" height="30" width="30" onclick="goGetWordPressForm('https://www.facebook.com/230144303829183','fb')">  &nbsp; &nbsp;
+                    <a href="tel:206-707-6388"> <img src="images/MetroUI_Phone.png" height="30" width="30"></a> &nbsp; &nbsp;
+                    <img src="images/Google Calendar.png" height="30" width="30" onclick="goGetWordPressForm('https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA','none')">
+                        &nbsp; &nbsp;
+                </div>
+                                
+            </div>
+                    
+                    <!--Panel-->
+                    <div data-role="panel" id="myPanel">
+                        <br>
+                        <div align=“center”>
+                            <img src="images/askbys.png" width="60%">
+                        </div>
+                        <br>
+                        <p>askBYS is a service of Bainbridge Youth Services (BYS), a 50 year old organization whose mission is to promote the social and emotional well being of teens and their families.
+                        <p>With the askBYS app you can:
+                        
+                        <p>Make an appointment request with a BYS therapist (we are located in Bainbridge Island, WA).
+                        
+                        <p>Ask questions to BYS therapists and medical doctors.
+                        
+                        <p>Read questions posed by other teens and answers given by BYS.
+                        
+                        <p>Connect with our Facebook and Twitter accounts (askBYSorg) and askBYS Calendar.
+                        
+                        <p>Visit us at <a onclick="goGetWordPressForm('http://askbys.org','none')"> askBYS.org </a> for more resources and information about our organization.
+                        
+                        <p>© 2016 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
+                                                
+                        </div>
+                    
+                    
+                    
+        </div>
+        <script>
+            // open win and turn off location and Kirk update 1
+            //info on fallback - http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
+            
+            function checkAppSupport(appList,availURL,unavailURL,appDetect){
+                var k = appList.pop();
+                var goURL = availURL[k];
+                var stopURL = unavailURL[k];
+                var checkScheme = appDetect[k];
+                appAvailability.check(checkScheme,
+                                      function() {  // Success callback
+                                      document.myAppUrls[k] = goURL;
+                                      // console.log("Success Callback " + k);
+                                      if(appList.length>0){
+                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
+                                      }
+                                      },
+                                      function() {  // Error callback
+                                      document.myAppUrls[k] = stopURL;
+                                      // console.log("Failure Callback " + k);
+                                      if(appList.length>0){
+                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
+                                      }
+                                      }
+                                      );
+            }
+        
+        function onDeviceReady(){
+            document.myAppUrls = {};
+            console.log("onDeviceReady");
+            
+            var appCheck = {};
+            var appPresentUrl = {};
+            var appAbsentUrl = {};
+            
+            if(navigator.userAgent.match(/iPhone/i))
+            {
+                appCheck.twitter = "twitter://";
+                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
+                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
+                appCheck.fb = "facebook://";
+                //appPresentUrl.fb = "fb://page/600914096651234"; May not work with ios 9
+                //Kirk trying something new
+                appPresentUrl.fb = "https://www.facebook.com/230144303829183";
+                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
+                checkAppSupport(["twitter"],appPresentUrl,appAbsentUrl,appCheck);
+            }
+            else if(navigator.userAgent.match(/Android/i))
+            {
+                appCheck.twitter = "com.twitter.android";
+                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
+                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
+                appCheck.fb = "com.facebook.katana";
+                //Still not sure what the corrrect fb link to app is... May need to use intents
+                appPresentUrl.fb = "fb://page/230144303829183";
+                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
+                checkAppSupport(["twitter","fb"],appPresentUrl,appAbsentUrl,appCheck);
+            }
+            
+        }
+        
+        document.addEventListener('deviceready', onDeviceReady, false);
+        
+        function goGetWordPressForm(WPUrl, scheme) {
+            var launchStr
+            launchStr = document.myAppUrls[scheme];
+            if (!launchStr){
+                window.open(WPUrl, '_blank',
+                            'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
+            } else {
+                // console.log("window.open " + launchStr);
+                window.open(launchStr,'_system');
+            }
+        }
+        // open win and turn off location
+        //function goGetWordPressFormInjectCSS(WPUrl) {
+        //    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
+        //    ref.addEventListener('loadstop', function() {
+        //    ref.insertCSS({file: "styles/wp-contact7.css"});
+        //                         });
+        //};
+        // attach listener to loadstart
+        //ref.addEventListener('loadstart', function(event) {
+        //var urlSuccessPage = "http://myloginapp/success/";
+        //if (event.url == urlSuccessPage) {
+        //ref.close();
+        //}
+        //});
+            </script>
+
+
+
+            </body>
+</html>
+
