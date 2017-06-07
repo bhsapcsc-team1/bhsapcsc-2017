@@ -79,29 +79,29 @@ label small {
 .main-page-dividers{
 	padding: 1.8em;
 	text-align:center;
-  border-style: solid;
-  border-color: #056f55;
-  border-width: 1px;
-  text-shadow: 0 1px 0 #444444;
+ 	border-style: solid;
+  	border-color: #056f55;
+  	border-width: 1px;
+ 	text-shadow: 0 1px 0 #444444;
 	height: 88px;
-  font-family: 'cabin', sans-serif;
-  font-weight: bold;
-  vertical-align: middle;
-  line-height: 88px;
+  	font-family: 'cabin', sans-serif;
+  	font-weight: bold;
+  	vertical-align: middle;
+  	line-height: 88px;
 
 }
 .main-page-dividers:active{
-  background-color: #292562;
-  border-color: #393389;
+  	background-color: #292562;
+  	border-color: #393389;
 }
 .main-page-dividers:hover{
-  background-color: #0aca9b;
-  border-color: #056f55;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #444444;
-   -webkit-box-shadow: 0 0 12px #292562;
-    -moz-box-shadow: 0 0 12px #292562;
-    box-shadow: 0 0 12px #292562;
+  	background-color: #0aca9b;
+  	border-color: #056f55;
+  	color: #ffffff;
+  	text-shadow: 0 1px 0 #444444;
+   		-webkit-box-shadow: 0 0 12px #292562;
+    		-moz-box-shadow: 0 0 12px #292562;
+    	box-shadow: 0 0 12px #292562;
 }
 
 /*Start of new css for social menu
@@ -124,66 +124,65 @@ label small {
 -----------------------------------------------------------------------------------------------------------*/
 
 .side-menu-option{
-  color: #000000;
-  padding: 5%;
-  font-weight: normal;
+	color: #000000;
+ 	padding: 5%;
+  	font-weight: normal;
 }
 
 .side-menu-option:hover{
-  background-color: #0aca9b;
-  text-shadow: 0 0px 0 #444444;
-  font-weight: normal;
-  color: #ffffff;
+  	background-color: #0aca9b;
+  	text-shadow: 0 0px 0 #444444;
+  	font-weight: normal;
+  	color: #ffffff;
 }
 
 /*Start of new css for scrolling teams
 -----------------------------------------------------------------------------------------------------------*/
 #all-containers *{
-margin:0;
-padding:0;
-outline:0;
+	margin:0;
+	padding:0;
+	outline:0;
 }
 
 #scroll {
-width:max;
-height:500px;
-margin:30px auto;
-overflow:auto;
-scroll-snap-points-x: repeat(465px);
-scroll-snap-type: mandatory;
+	width:max;
+	height:500px;
+	margin:30px auto;
+	overflow:auto;
+		scroll-snap-points-x: repeat(465px);
+		scroll-snap-type: mandatory;
 }
 
 #scroll ul {
-display:table;
-white-space:nowrap;
-list-style:none;
+	display:table;
+	white-space:nowrap;
+	list-style:none;
 
 }
 #scroll li {
-display:table-cell;
-text-align:center;
+	display:table-cell;
+	text-align:center;
 }
 
 #scroll img {
-margin:8px 10px 0 10px;
-
+	margin:8px 10px 0 10px;
 }
 
 #scroll ul .about{
-  text-align: left;
-  margin-left: 20px;
+  	text-align: left;
+  	margin-left: 20px;
 
 }
 #scroll ul .name{
-  text-align: left;
-  padding-left: 40%;
+  	text-align: left;
+  	padding-left: 40%;
 }
 #scroll span {
-padding:0 0 5px 0;
-display:block;
+	padding:0 0 5px 0;
+	display:block;
 }
 /*Start of new css for copyright font
 -----------------------------------------------------------------------------------------------------------*/
 #myPanel .copyright{
-  font-size: .8em;
+  	font-size: .8em;
 }
