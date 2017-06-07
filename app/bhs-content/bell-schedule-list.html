@@ -5,92 +5,74 @@
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
             <title>Bainbridge Youth Services</title>
-            <link rel="stylesheet" href="styles/BYSMobile.min.css" />
-            <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
-            <link rel="stylesheet" href="styles/custom.css" />
-            <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css" />
-            <link rel="stylesheet" href="styles/font-awesome.min.css" />
-            <script src="scripts/libs/jquery-1.11.1.min.js"></script>
-            <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
-            <script src="scripts/libs/jquery.pageset.js"></script>
+            <link rel="stylesheet" href="../styles/BYSMobile.min.css" />
+            <link rel="stylesheet" href="../styles/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="../styles/custom.css" />
+            <link rel="stylesheet" href="../styles/jquery.mobile.structure-1.4.5.min.css" />
+            <link rel="stylesheet" href="../styles/font-awesome.min.css" />
+            <script src="../scripts/libs/jquery-1.11.1.min.js"></script>
+            <script src="../scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+            <script src="../scripts/libs/jquery.pageset.js"></script>
             <script src="cordova.js"></script>
 
 </head>
     <body id="index">
         <div data-role="page" id="home" data-theme="a" >
             <div data-role="content" data-theme="a">
-                <a href="index.html" data-ajax="false" data-role="button" data-icon="arrow-l" data-iconpos="notext"></a>
-
+                <a href="#myPanel"> <i class="fa fa-bars fa-lg"></i> </a>
                 <div class="text-center">
-                    <img src="images/askbys.png"/>
+                    <img src="../images/askbys.png"/>
                 </div>
 
                 <br>
                 <form>
 
                 </form>
-
-                <form>
-                    <div class="ui-field-contain">
-                        <select onchange="if (this.value) window.location.href=this.value" data-theme="d">
-                            <option value="">Bell Schedules</option>
-                            <option value="bell-schedule1.html">Regular Monday (early release)</option>
-                            <option value="bell-schedule2.html">Tuesday-Friday</option>
-                            <option value="bell-schedule3.html">Special (activity) Tuesday-Friday</option>
-							<option value="bell-schedule4.html">All periods no early release</option>
-							<option value="bell-schedule5.html">One/Two Hour Late Start Days</option>
-                            <option value="bell-schedule7.html">Smarter Balanced Exam Schedule</option>
-                            <option value="bell-schedule9.html">Open House Schedule</option>
-                            <option value="bell-schedule6">Semester Finals / Senior Finals</option>
-							<option value="bell-schedule8.html">Field Day Schedule</option>
-                        </select>
-                    </div>
-                </form>
-		<button id="button" onclick="window.open('lunchMenu.html','_self')">Lunch Menu</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/Page/2559','none')">Bus Information</button>
-                <button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/site/Default.aspx?PageType=1&SiteID=8&ChannelID=205&DirectoryType=6','none')">Staff Directory</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/domain/1125','none')">Important Forms</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/site/Default.aspx?PageType=1&SiteID=8&ChannelID=202&DirectoryType=6','none')">Club Information</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/cms/lib/WA01001636/Centricity/domain/630/registration/courseofferings.html','none')">Course offerings</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/domain/865','none')">Athletics Information</button>
-		<button id="button" onclick="goGetWordPressForm('http://thespartanstandard.com/','none')">School Newspaper</button>
-
-
+		          <button id="button" onclick="window.location.href='schedules/early-release.html'" data-ajax="false">Regular Monday</button>
+                  <button id="button" onclick="window.location.href='schedules/block.html'" data-ajax="false">Regular Tu-F Block</button>
+                  <button id="button" onclick="window.location.href='schedules/block-activity.html'" data-ajax="false">Activity Schedules</button>
+                  <button id="button" onclick="window.location.href='schedules/no-early-release.html'" data-ajax="false">1-6 No Early Release</button>
+                  <button id="button" onclick="window.location.href='schedules/late-start.html'" data-ajax="false">Late Start (Snow) Days</button>
+                  <button id="button" onclick="window.location.href='schedules/smarter-balanced.html'" data-ajax="false">Smarter Balanced Exam</button>
+                  <button id="button" onclick="window.location.href='schedules/open-house.html'" data-ajax="false">Open House </button>
+                  <button id="button" onclick="window.location.href='schedules/finals.html'" data-ajax="false">Finals</button>
+                  <button id="button" onclick="window.location.href='schedules/field-day.html'" data-ajax="false">Field Day</button>
 
                 <br>
                 <br>
 
                 <!--buttons-->
                 <div align="center">
-                    <img src="images/Twitterbird.png" height="30" width="30" onclick="goGetWordPressForm('http://twitter.com/askbysorg','twitter')"> &nbsp; &nbsp;
-                    <img src="images/Transparent-Facebook-Logo-Icon.png" height="30" width="30" onclick="goGetWordPressForm('https://www.facebook.com/230144303829183','fb')">  &nbsp; &nbsp;
-                    <a href="tel:206-707-6388"> <img src="images/MetroUI_Phone.png" height="30" width="30"></a> &nbsp; &nbsp;
-                    <img src="images/Google Calendar.png" height="30" width="30" onclick="goGetWordPressForm('https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA','none')">
+                    <img src="../images/Twitterbird.png" height="30" width="30" onclick="goGetWordPressForm('http://twitter.com/askbysorg','twitter')"> &nbsp; &nbsp;
+                    <img src="../images/Transparent-Facebook-Logo-Icon.png" height="30" width="30" onclick="goGetWordPressForm('https://www.facebook.com/230144303829183','fb')">  &nbsp; &nbsp;
+                    <a href="tel:206-707-6388"> <img src="../images/MetroUI_Phone.png" height="30" width="30"></a> &nbsp; &nbsp;
+                    <img src="../images/Google Calendar.png" height="30" width="30" onclick="goGetWordPressForm('https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA','none')">
                         &nbsp; &nbsp;
                 </div>
 
             </div>
 
-            <!--Panel-->
-            <div data-role="panel" id="myPanel">
-                <br>
-                <div align="center">
-                    <img src="images/icon-60@2x.png" width="60%">
-                </div>
-                <br>
-                <div class="side-menu">
-                    <a href="index.html" data-ajax="false"><div class="side-menu-option">Home</div></a>
-                    <a href="bys-content/bys.html" data-ajax="false"><div class="side-menu-option">askBYS</div></a>
-                    <a href="" data-ajax="false"><div class="side-menu-option">Calendar</div></a>
-                    <a href="" data-ajax="false"><div class="side-menu-option">Staff Directory</div></a>
-                    <a href="" data-ajax="false"><div class="side-menu-option">New Student</div></a>
-                    <a href="" data-ajax="false"><div class="side-menu-option">Bell Schedules</div></a>
-                    <a href="" data-ajax="false"><div class="side-menu-option">More</div></a>
-                    <a href="contributors.html" data-ajax="false"><div class="side-menu-option">About Our Team</div></a>
-                </div>
-                <p class="copyright">Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS</p>
-                <p class="copyright">&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
+  <!--Panel-->
+        <div data-role="panel" id="myPanel">
+            <br>
+            <div align="center">
+                <img src="../images/icon-60@2x.png" width="60%">
             </div>
+            <br>
+            <div class="side-menu">
+                <a href="../index.html" data-ajax="false"><div class="side-menu-option">Home</div></a>
+                <a href="bys-content/bys.html" data-ajax="false"><div class="side-menu-option">askBYS</div></a>
+                <a href="" data-ajax="false"><div class="side-menu-option">Calendar</div></a>
+                <a href="" data-ajax="false"><div class="side-menu-option">Staff Directory</div></a>
+                <a href="" data-ajax="false"><div class="side-menu-option">New Student</div></a>
+                <a href="bhs-content/bell-schedule-list.html" data-ajax="false"><div class="side-menu-option" style="font-weight:bold">Bell Schedules</div></a>
+                <a href="" data-ajax="false"><div class="side-menu-option">More</div></a>
+                <a href="contributors.html" data-ajax="false"><div class="side-menu-option">About Our Team</div></a>
+            </div>
+            <p class="copyright">Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS</p>
+            <p class="copyright">&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
+        </div>
+
 
 
 
