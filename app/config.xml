@@ -3,23 +3,23 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id = "org.bainbridgeyouthservices.askbys"
     version = "3.0.1">
-    
+
     <name>Team1</name>
-    
+
     <description>
         askbys.org mobile app
     </description>
-    
+
     <author href="http://askbys.org" email="askbys@bainbridgeyouthservices.org">
         Bainbridge Youth Services
     </author>
-    
+
     <icon src="images/icon.png" />
     <splash src="images/Default-568@2x.png" />\
-    
-    
+
+
     <!-- iOS icons -->
-    
+
     <!-- iPhone 6 / 6+ -->
     <icon src="images/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
     <!-- iPhone / iPod Touch  -->
@@ -46,10 +46,10 @@
     <!-- iPad Spotlight and Settings Icon -->
     <icon src="images/icon-50.png" gap:platform="ios" width="50" height="50" />
     <icon src="images/icon-50@2x.png" gap:platform="ios" width="100" height="100" />
-    
-    
-    
-    
+
+
+
+
     <!-- I guess we need this! -->
     <!-- iPhone 5 / iPod Touch (5th Generation) -->
     <!-- ios splash -->
@@ -58,7 +58,7 @@
     <splash src="images/Default-568h@2x.png" platform="ios" width="640" height="1136" />
     <splash src="images/splashios750x1334.png" platform="ios" width="750" height="1334" />
     <splash src="images/splashios1242x2208" platform="ios" width="1242" height="2208" />
-    
+
     <!-- Android icon -->
     <icon src="ldpi.png" platform="android" qualifier="ldpi" />
     <icon src="mdpi.png" platform="android" qualifier="mdpi" />
@@ -66,7 +66,7 @@
     <icon src="xhdpi.png" platform="android" qualifier="xhdpi" />
     <icon src="xxhdpi.png" platform="android" qualifier="xxhdpi" />
     <icon src="xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
-    
+
     <!-- Android splash -->
     <splash src="images/splashldpi.png" platform="android" qualifier="port-ldpi" />
     <splash src="images/splashmdpi.png" platform="android" qualifier="port-mdpi" />
@@ -74,82 +74,41 @@
     <splash src="images/splashxdpi.png" platform="android" qualifier="port-xhdpi" />
     <splash src="images/splashxxdpi.png" platform="android" qualifier="port-xxhdpi" />
     <splash src="images/splashxxxdpi.png" platform="android" qualifier="port-xxxhdpi" />
-    
+
     <!-- default splash -->
     <gap:splash src="images/Newsplash.png" />
 
-    
-    <!-- Kirk Add's and update 1 -->
-    <!-- Core plugins -->
-    <!--
-     <gap:plugin name="org.apache.cordova.battery-status" />
-     <gap:plugin name="org.apache.cordova.camera" />
-     <gap:plugin name="org.apache.cordova.media-capture" />
-     <gap:plugin name="org.apache.cordova.console" />
-     <gap:plugin name="org.apache.cordova.contacts" />
-     <gap:plugin name="org.apache.cordova.device" />
-     <gap:plugin name="org.apache.cordova.device-motion" />
-     <gap:plugin name="org.apache.cordova.device-orientation" />
-     <gap:plugin name="org.apache.cordova.dialogs" />
-     <gap:plugin name="org.apache.cordova.file" />
-     <gap:plugin name="org.apache.cordova.file-transfer" />
-     <gap:plugin name="org.apache.cordova.geolocation" />
-     <gap:plugin name="org.apache.cordova.globalization" />
-     <gap:plugin name="org.apache.cordova.inappbrowser" />
-     <gap:plugin name="org.apache.cordova.media" />
-     <gap:plugin name="org.apache.cordova.network-information" />
-     <gap:plugin name="org.apache.cordova.splashscreen" />
-     <gap:plugin name="org.apache.cordova.vibration" />
-     
-     -->
-    
+
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-appavailability" source="npm" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.2.3" source="npm"/>
+
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+
     <plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-disable-nsapptransportsecurity" source="npm" />
-    
-    
-    <!-- Built-in plug-in, not sure it works, going back to the other one
-      <preference name="ios-statusbarstyle" value="default" />
-            Instead try this:
-     <feature name="StatusBar">
-     <param name="ios-package" value="CDVStatusBar" onload="true" />
-     <preference name="StatusBarOverlaysWebView" value="false" />
 
-     
 
-     </feature>
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-    <preference name="StatusBarOverlaysWebView" value="false"/>
-    <preference name="StatusBarStyle" value="default" />
-    <preference name="ios-statusbarstyle" value="default" />
-
-    <gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
-
-     -->
-    
-    
-    
-    
     <!-- from here: https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/the-whitelist-system.md
      -->
-    
+
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <access origin="*" /> <!-- Required for iOS9 -->
-    
+
     <!-- Kirk Add's for no iOS encryption -->
     <gap:config-file platform="ios" parent="ITSAppUsesNonExemptEncryption" mode="add">
         <false/>
     </gap:config-file>
-    
-    
-    
-    
+
+
+
+
     <!-- what are these? -->
     <feature name="http://api.phonegap.com/1.0/network" />
     <feature name="http://api.phonegap.com/1.0/file" />
-    
-    
+
+
 </widget>
