@@ -76,8 +76,8 @@
     <splash src="images/splashxxxdpi.png" platform="android" qualifier="port-xxxhdpi" />
 
     <!-- default splash -->
-    <gap:splash src="images/Newsplash.png" />
-
+    <!--<gap:splash src="images/Newsplash.png" />-->
+    <splash src="splash.png" />
 
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-appavailability" source="npm" />
