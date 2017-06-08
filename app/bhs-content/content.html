@@ -1,193 +1,98 @@
-
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
-            <title>Bainbridge Youth Services</title>
-            <link rel="stylesheet" href="../styles/BYSMobile.min.css" />
-            <link rel="stylesheet" href="../styles/jquery.mobile.icons.min.css" />
-            <link rel="stylesheet" href="../styles/custom.css" />
-            <link rel="stylesheet" href="../styles/jquery.mobile.structure-1.4.5.min.css" />
-            <link rel="stylesheet" href="../styles/font-awesome.min.css" />
-            <script src="../scripts/libs/jquery-1.11.1.min.js"></script>
-            <script src="../scripts/libs/jquery.mobile-1.4.5.min.js"></script>
-            <script src="../scripts/libs/jquery.pageset.js"></script>
-            <script src="cordova.js"></script>
-            
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, length=device-length, minimum-scale=1, maximum-scale=1" />
+    <title>Spartan Content | BHS Assistant</title>
+    <link rel="stylesheet" href="../styles/BYSMobile.min.css" />
+    <link rel="stylesheet" href="../styles/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="../styles/custom.css" />
+    <link rel="stylesheet" href="../styles/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="../styles/font-awesome.min.css" />
+    <script src="../scripts/libs/jquery-1.11.1.min.js"></script>
+    <script src="../scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../scripts/libs/jquery.pageset.js"></script>
+    <script src="cordova.js"></script>
+
 </head>
-    <body id="index">
-        <div data-role="page" id="home" data-theme="a" >
-            <div data-role="content" data-theme="a">
-                <a href="#myPanel"> <i class="fa fa-bars fa-lg"></i> </a>
-                
-                <div class="text-center">
-                    <img src="../images/askbys.png"/>
-                </div>
-                
-                <br>
-                <form>
-                    
-                </form>
-                                
-               
-		<button id="button" onclick="window.open('lunchMenu.html','_self')">Lunch Menu</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/Page/2559','none')">Bus Information</button>
-                <button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/site/Default.aspx?PageType=1&SiteID=8&ChannelID=205&DirectoryType=6','none')">Staff Directory</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/domain/1125','none')">Important Forms</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/site/Default.aspx?PageType=1&SiteID=8&ChannelID=202&DirectoryType=6','none')">Club Information</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/cms/lib/WA01001636/Centricity/domain/630/registration/courseofferings.html','none')">Course Offerings</button>
-		<button id="button" onclick="goGetWordPressForm('https://www.bisd303.org/domain/865','none')">Athletics Information</button>
-		<button id="button" onclick="goGetWordPressForm('http://thespartanstandard.com/','none')">School Newspaper</button>               
-                                
-                
-                                
-                <br>
-                <br>
-                                
-                <!--buttons-->
-                <div align="center">
-                    <img src="../images/Twitterbird.png" height="30" width="30" onclick="goGetWordPressForm('http://twitter.com/askbysorg','twitter')"> &nbsp; &nbsp;
-                    <img src="../images/Transparent-Facebook-Logo-Icon.png" height="30" width="30" onclick="goGetWordPressForm('https://www.facebook.com/230144303829183','fb')">  &nbsp; &nbsp;
-                    <a href="tel:206-707-6388"> <img src="../images/MetroUI_Phone.png" height="30" width="30"></a> &nbsp; &nbsp;
-                    <img src="../images/Google Calendar.png" height="30" width="30" onclick="goGetWordPressForm('https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA','none')">
-                        &nbsp; &nbsp;
-                </div>
-                                
+
+<body id="index">
+    <div data-role="page" id="home" data-theme="a">
+        <div data-role="content" data-theme="a">
+            <a href="#myPanel"> <i class="fa fa-bars fa-lg"></i> </a>
+
+            <div class="text-center">
+                <img src="../images/askbys.png" />
             </div>
-                    
-                     
-<!--Panel-->
-<div data-role="panel" id="myPanel">
-    <br>
-        <div align="center">
-            <img src="../images/icon-60@2x.png" width="60%">
+
+            <p><a class="ui-btn" href="https://www.bisd303.org/cms/lib/WA01001636/Centricity/Domain/60/High%20School.pdf" target="_blank">Lunch Menu</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/page/2559" target="_blank">Bus Information</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/bhs/staff/" target="_blank">Staff Directory</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/domain/1125" target="_blank">Important Forms</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/site/Default.aspx?PageType=1&SiteID=8&ChannelID=202&DirectoryType=6" target="_blank">Club Information</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/cms/lib/WA01001636/Centricity/domain/630/registration/courseofferings.html" target="_blank">Course Offerings</a></p>
+            <p><a class="ui-btn" href="https://www.bisd303.org/domain/865" target="_blank">Athletics Information</a></p>
+            <p><a class="ui-btn" href="http://thespartanstandard.com/" target="_blank">School Newspaper</a></p>
+
+            <br>
+            <br>
+
+            <div class="social-bar-bottom">
+                <div id="center-social">
+                    <a href="https://twitter.com/askbysorg" target="_blank" data-app-link="twitter://user?screen_name=askbysorg" data-android-app="com.twitter.android" data-ios-app="twitter://">
+                        <img src="../images/twitter.svg" height="50" width="50" />
+                    </a> &nbsp; &nbsp;
+                    <a href="https://facebook.com/bainbridgeyouthservices/" target="_blank" data-app-link="fb://facewebmodal/f?href=https%3A%2F%2Ffacebook.com%2Fbainbridgeyouthservices%2F" data-android-app="com.facebook.katana" data-ios-app="facebook://">
+                        <img src="../images/facebook.svg" alt="Facebook" height="30" width="30" style="margin:10px">
+                    </a> &nbsp; &nbsp;
+                    <a href="tel:206-707-6388"> <img src="../images/MetroUI_Phone.png" height="30" width="30" style="margin:10px"></a> &nbsp; &nbsp;
+                    <a href="https://calendar.google.com/calendar/embed?src=bainbridgeyouthservices.org_m3jggmmcc9r6abmi6smr8ik0bs%40group.calendar.google.com&ctz=America/Los_Angeles&mode=AGENDA" target="_blank">
+                        <img src="../images/Google Calendar.png" height="30" width="30" style="margin:10px">
+                    </a> &nbsp; &nbsp;</div>
+            </div>
+        </div>
+
+        <!--Panel-->
+        <div data-role="panel" id="myPanel">
+            <br>
+            <div align="center">
+                <img src="../images/icon-60@2x.png" width="60%">
             </div>
             <br>
-                <div class="side-menu">
-                    <a href="../index.html" data-ajax="false">
-                        <div class="side-menu-option">Home</div>
-                    </a>
-                    <a href="../bys-content/bys.html" data-ajax="false">
-                        <div class="side-menu-option">askBYS</div>
-                    </a>
-                    <a href="" data-ajax="false">
-                        <div class="side-menu-option">Calendar</div>
-                    </a>
-                    <a href="" data-ajax="false">
-                        <div class="side-menu-option">Staff Directory</div>
-                    </a>
-                    <a href="" data-ajax="false">
-                        <div class="side-menu-option">New Student</div>
-                    </a>
-                    <a href="bell-schedule-list.html" data-ajax="false">
-                        <div class="side-menu-option">Bell Schedules</div>
-                    </a>
-                    <a href="#" data-ajax="false">
-                        <div class="side-menu-option" style="font-weight: bold">More</div>
-                    </a>
-                    <a href="../contributors.html" data-ajax="false">
-                        <div class="side-menu-option">About Our Team</div>
-                    </a>
-                </div>
-                <p class="copyright">Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS</p>
-                <p class="copyright">&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
+            <div class="side-menu">
+                <a href="../index.html" data-ajax="false">
+                    <div class="side-menu-option">Home</div>
+                </a>
+                <a href="../bys-content/bys.html" data-ajax="false">
+                    <div class="side-menu-option">askBYS</div>
+                </a>
+                <a href="" data-ajax="false">
+                    <div class="side-menu-option">Calendar</div>
+                </a>
+                <a href="" data-ajax="false">
+                    <div class="side-menu-option">Staff Directory</div>
+                </a>
+                <a href="" data-ajax="false">
+                    <div class="side-menu-option">New Student</div>
+                </a>
+                <a href="bell-schedule-list.html" data-ajax="false">
+                    <div class="side-menu-option">Bell Schedules</div>
+                </a>
+                <a href="#" data-ajax="false">
+                    <div class="side-menu-option" style="font-weight: bold">More</div>
+                </a>
+                <a href="../contributors.html" data-ajax="false">
+                    <div class="side-menu-option">About Our Team</div>
+                </a>
             </div>
-                    
-                    
+            <p class="copyright">Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS</p>
+            <p class="copyright">&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
         </div>
-        <script>
-            // open win and turn off location and Kirk update 1
-            //info on fallback - http://stackoverflow.com/questions/23095906/how-to-open-twitter-and-facebook-app-with-phonegap
-            
-            function checkAppSupport(appList,availURL,unavailURL,appDetect){
-                var k = appList.pop();
-                var goURL = availURL[k];
-                var stopURL = unavailURL[k];
-                var checkScheme = appDetect[k];
-                appAvailability.check(checkScheme,
-                                      function() {  // Success callback
-                                      document.myAppUrls[k] = goURL;
-                                      // console.log("Success Callback " + k);
-                                      if(appList.length>0){
-                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
-                                      }
-                                      },
-                                      function() {  // Error callback
-                                      document.myAppUrls[k] = stopURL;
-                                      // console.log("Failure Callback " + k);
-                                      if(appList.length>0){
-                                      checkAppSupport(appList,availURL,unavailURL,appDetect);
-                                      }
-                                      }
-                                      );
-            }
-        
-        function onDeviceReady(){
-            document.myAppUrls = {};
-            console.log("onDeviceReady");
-            
-            var appCheck = {};
-            var appPresentUrl = {};
-            var appAbsentUrl = {};
-            
-            if(navigator.userAgent.match(/iPhone/i))
-            {
-                appCheck.twitter = "twitter://";
-                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
-                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
-                appCheck.fb = "facebook://";
-                //appPresentUrl.fb = "fb://page/600914096651234"; May not work with ios 9
-                //Kirk trying something new
-                appPresentUrl.fb = "https://www.facebook.com/230144303829183";
-                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
-                checkAppSupport(["twitter"],appPresentUrl,appAbsentUrl,appCheck);
-            }
-            else if(navigator.userAgent.match(/Android/i))
-            {
-                appCheck.twitter = "com.twitter.android";
-                appPresentUrl.twitter = "twitter://user?screen_name=askbysorg";
-                appAbsentUrl.twitter = "http://mobile.twitter.com/askbysorg";
-                appCheck.fb = "com.facebook.katana";
-                //Still not sure what the corrrect fb link to app is... May need to use intents
-                appPresentUrl.fb = "fb://page/230144303829183";
-                appAbsentUrl.fb = "https://www.facebook.com/230144303829183";
-                checkAppSupport(["twitter","fb"],appPresentUrl,appAbsentUrl,appCheck);
-            }
-            
-        }
-        
-        document.addEventListener('deviceready', onDeviceReady, false);
-        
-        function goGetWordPressForm(WPUrl, scheme) {
-            var launchStr
-            launchStr = document.myAppUrls[scheme];
-            if (!launchStr){
-                window.open(WPUrl, '_blank',
-                            'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-            } else {
-                // console.log("window.open " + launchStr);
-                window.open(launchStr,'_system');
-            }
-        }
-        // open win and turn off location
-        //function goGetWordPressFormInjectCSS(WPUrl) {
-        //    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-        //    ref.addEventListener('loadstop', function() {
-        //    ref.insertCSS({file: "styles/wp-contact7.css"});
-        //                         });
-        //};
-        // attach listener to loadstart
-        //ref.addEventListener('loadstart', function(event) {
-        //var urlSuccessPage = "http://myloginapp/success/";
-        //if (event.url == urlSuccessPage) {
-        //ref.close();
-        //}
-        //});
-            </script>
 
+    </div>
+    <script src="../scripts/app-links.js"></script>
 
+</body>
 
-            </body>
 </html>
-
