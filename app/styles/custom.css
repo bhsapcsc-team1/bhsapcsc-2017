@@ -89,18 +89,18 @@ label small {
  	border-style: solid;
   	border-color: #056f55;
   	border-width: 1px;
- 	  text-shadow: 0 1px 0 #444444;
 	   min-height: 9em;
   	font-family: 'cabin', sans-serif;
   	font-weight: bold;
   	vertical-align: middle;
   	line-height: 9em;
+    text-shadow: 0 1px 0 #444444;
 
 }
 .main-page-dividers a{
     color:#FFFFFF;
 }
-.main-page-dividers a:visited{
+.row-dividers .main-page-dividers a:visited{
     color:#FFFFFF;
 }
 .main-page-dividers:active{
