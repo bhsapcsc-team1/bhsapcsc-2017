@@ -90,11 +90,11 @@ label small {
   	border-color: #056f55;
   	border-width: 1px;
  	  text-shadow: 0 1px 0 #444444;
-	   min-height: 88px;
+	   min-height: 9em;
   	font-family: 'cabin', sans-serif;
   	font-weight: bold;
   	vertical-align: middle;
-  	line-height: 88px;
+  	line-height: 9em;
 
 }
 .main-page-dividers a{
