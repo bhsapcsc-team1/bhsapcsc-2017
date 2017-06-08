@@ -28,6 +28,7 @@ function loadJSONP(url, callback) {
 }
 
 function mycallback (posts) {
+    $('#demo').empty()
     $(posts.map(renderPost)).appendTo('#demo').collapsible()
 }
 
