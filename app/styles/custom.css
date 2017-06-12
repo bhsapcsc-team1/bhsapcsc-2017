@@ -107,6 +107,10 @@ label small {
     border-radius: .3125em;
 
 }
+a .main-page-dividers:hover{
+  color:#ffffff;
+
+}
 .main-page-dividers a{
     color:#FFFFFF;
 }
