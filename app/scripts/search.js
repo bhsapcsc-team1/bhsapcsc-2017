@@ -1,3 +1,5 @@
+/* global location, $ */
+
 var query = parseQueryString(location.search)
 
 function parseQueryString(qs) {

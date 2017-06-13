@@ -1,216 +1,206 @@
 @font-face {
- font-family: 'cabin', sans-serif;
- src:url('../font/Cabin-Regular.ttf') format('ttf');
+	font-family: 'cabin', sans-serif;
+	src: url('../font/Cabin-Regular.ttf') format('ttf');
 }
 
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(360deg);
+	}
 }
 
+body {
+	font-family: 'cabin', sans-serif;
+}
 
-  body {
-   font-family: 'cabin', sans-serif;
-  }
-
-.ui-btn{
-  font-family: 'cabin', sans-serif;
+.ui-btn {
+	font-family: 'cabin', sans-serif;
 }
 
 a {
-    text-decoration: none;
-    outline: none;
+	outline: none;
+	text-decoration: none;
 }
 
 div[data-role="content"] {
-  display: block;
-  width: 93%;
-  max-width: 480px;
-  margin: 0 auto;
+	display: block;
+	margin: 0 auto;
+	max-width: 480px;
+	width: 93%;
 }
 
 div[data-role="header"] p {
-  text-align: center;
+	text-align: center;
 }
 
 div[data-role="header"] p a {
-  color: white !important;
-  text-decoration: none;
+	color: white !important;
+	text-decoration: none;
 }
 
 legend {
-  font-weight: bold;
-  font-size: 16pt;
+	font-size: 16pt;
+	font-weight: bold;
 }
 
 label small {
-  color: slategray;
+	color: slategray;
 }
 
-
-
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .orange-button {
-  display: block;
-  background: #00AC90;
-  box-shadow: 0 1px 2px #AAA;
-  color: #333 !important; /* This is getting overridden by a stylesheet loaded before this one. TODO? #333 */
-  text-shadow: none;
-  margin: 10px 0;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
+	background: #00AC90;
+	box-shadow: 0 1px 2px #AAA;
+	color: #333 !important;
+	display: block;
+	margin: 10px 0;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: none;
 }
 
 .orange-button:hover {
-  background: #00AC90;
+	background: #00AC90;
 }
 
-
-/*Start of new css for tile index format
------------------------------------------------------------------------------------------------------------*/
-.row-dividers{
-  width:100%;
+.row-dividers {
+	width: 100%;
 }
 
-.row-dividers .main-page-dividers{
-  display: inline-block;
-  color:#FFFFFF;
-  width:45%;
-	margin-bottom: 2%;
+.row-dividers .main-page-dividers {
 	background-color: #09b087;
+	color: #FFFFFF;
+	display: inline-block;
+	margin-bottom: 2%;
 	margin-top: 2%;
+	width: 45%;
 }
 
-.row-dividers .main-page-dividers a{
-  color:#FFFFFF;
-  display: block;
-}
-.main-page-dividers{
-	text-align:center;
- 	border-style: solid;
-  	border-color: #056f55;
-  	border-width: 1px;
-	   min-height: 8em;
-  	font-family: 'cabin', sans-serif;
-  	font-weight: bold;
-  	vertical-align: middle;
-  	line-height: 8em;
-    text-shadow: 0 1px 0 #444444;
-    border-radius: .3125em;
-
-}
-a .main-page-dividers:hover{
-  color:#ffffff;
-
-}
-.main-page-dividers a{
-    color:#FFFFFF;
-}
-.row-dividers .main-page-dividers a:visited{
-    color:#FFFFFF;
-}
-.main-page-dividers:active{
-  	background-color: #292562;
-  	border-color: #393389;
-}
-.main-page-dividers:hover{
-  	background-color: #0aca9b;
-  	border-color: #056f55;
-  	color: #ffffff;
-  	text-shadow: 0 1px 0 #444444;
-   		-webkit-box-shadow: 0 0 12px #292562;
-    		-moz-box-shadow: 0 0 12px #292562;
-    	box-shadow: 0 0 12px #292562;
-      color:#FFFFFF;
+.row-dividers .main-page-dividers a {
+	color: #FFFFFF;
+	display: block;
 }
 
-/*Start of new css for social menu
------------------------------------------------------------------------------------------------------------*/
+.main-page-dividers {
+	border-color: #056f55;
+	border-radius: .3125em;
+	border-style: solid;
+	border-width: 1px;
+	font-family: 'cabin', sans-serif;
+	font-weight: bold;
+	line-height: 8em;
+	min-height: 8em;
+	text-align: center;
+	text-shadow: 0 1px 0 #444444;
+	vertical-align: middle;
+}
 
-.social-bar-bottom{
+.main-page-dividers a:hover {
+	color: #ffffff !important;
+}
+
+.main-page-dividers a {
+	color: #FFFFFF !important;
+}
+
+.row-dividers .main-page-dividers a:visited {
+	color: #FFFFFF;
+}
+.main-page-dividers:active {
+	background-color: #292562;
+	border-color: #393389;
+}
+
+.main-page-dividers:hover {
+	background-color: #0aca9b;
+	border-color: #056f55;
+	color: #ffffff;
+	-moz-box-shadow: 0 0 12px #292562;
+	-webkit-box-shadow: 0 0 12px #292562;
+	box-shadow: 0 0 12px #292562;
+	text-shadow: 0 1px 0 #444444;
+}
+
+.social-bar-bottom {
 	align-content: center;
 	margin-top: 1%;
 	padding: .5em;
 }
 
-#center-social{
+#center-social {
 	text-align: center;
 }
-.social-bar-bottom #center-social img{
-	padding-left:2%;
+
+.social-bar-bottom #center-social img {
+	padding-left: 2%;
 }
 
-/*Start of new css for side-bar menu
------------------------------------------------------------------------------------------------------------*/
-
-.side-menu-option{
+.side-menu-option {
 	color: #000000;
- 	padding: 5%;
-  	font-weight: normal;
+	font-weight: normal;
+	padding: 5%;
 }
 
-.side-menu-option:hover{
-  	background-color: #0aca9b;
-  	text-shadow: 0 0px 0 #444444;
-  	font-weight: normal;
-  	color: #ffffff;
+.side-menu-option:hover {
+	background-color: #0aca9b;
+	color: #ffffff;
+	font-weight: normal;
+	text-shadow: 0 0px 0 #444444;
 }
 
-/*Start of new css for scrolling teams
------------------------------------------------------------------------------------------------------------*/
-#all-containers *{
-	margin:0;
-	padding:0;
-	outline:0;
+#all-containers * {
+	margin: 0;
+	outline: 0;
+	padding: 0;
 }
 
 #scroll {
-	width:max;
-	height:500px;
-	margin:30px auto;
-	overflow:auto;
-		scroll-snap-points-x: repeat(465px);
-		scroll-snap-type: mandatory;
+	height: 500px;
+	margin: 30px auto;
+	overflow: auto;
+	scroll-snap-points-x: repeat(465px);
+	scroll-snap-type: mandatory;
+	width: max;
 }
 
 #scroll ul {
-	display:table;
-	white-space:nowrap;
-	list-style:none;
-
+	display: table;
+	list-style: none;
+	white-space: nowrap;
 }
+
 #scroll li {
-	display:table-cell;
-	text-align:center;
+	display: table-cell;
+	text-align: center;
 }
 
 #scroll img {
-	margin:8px 10px 0 10px;
+	margin: 8px 10px 0 10px;
 }
 
-#scroll ul .about{
-  	text-align: left;
-  	margin-left: 20px;
+#scroll ul .about {
+	margin-left: 20px;
+	text-align: left;
+}
 
+#scroll ul .name {
+	padding-left: 40%;
+	text-align: left;
 }
-#scroll ul .name{
-  	text-align: left;
-  	padding-left: 40%;
-}
+
 #scroll span {
-	padding:0 0 5px 0;
-	display:block;
+	display: block;
+	padding: 0 0 5px 0;
 }
-/*Start of new css for copyright font
------------------------------------------------------------------------------------------------------------*/
-#myPanel .copyright{
-  	font-size: .8em;
+
+#myPanel .copyright {
+	font-size: .8em;
 }
