@@ -13,77 +13,10 @@
     				<script src="../scripts/libs/jquery.mobile-1.4.5.min.js"></script>
     				<script src="../scripts/libs/jquery.pageset.js"></script>
     				<script src="../cordova.js"></script>
-					<script src="SimpleEvent.js"></script>
 					<script src="../scripts/libs/ical.js"></script>
-					<script src="Calendar.js"></script>
 					<script src="../scripts/libs/quoted-printable.js"></script>
-
-						<script>
-						var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-						var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'
-						, 'October', 'November', 'December'];
-						
-						function tooMuchGoodStuff(date) {
-							if(date.getHours()<12) {
-								return date.getHours()+":"+date.getMinutes()+" am";
-							}
-							else if (date.getHours()==12) {
-								return date.getHours()+":"+date.getMinutes()+" pm";
-							}
-							else {
-								return date.getHours()-12+":"+date.getMinutes()+" pm";
-							}
-						}
-
-					
-						function formatEvent(entry) {
-							if (entry.getStartTime() instanceof Date) {
-								return '<div data-role="collapsible" data-collapsed="true">'+
-								'<h3>'+entry.getTitle()+": "+formatDateForFetch(entry.getStartTime())+'</h3>'+
-								'<p>'+entry.getDescription()+"<br/>"+"Location: "+entry.getLocation()+'</p>'+'</div>'
-							}
-							return "";
-						}
-
-						function formatEvents(entries) {
-						console.log(entries);
-						var string = '';
-							for (var i = 0; i<(entries.length); i++) {
-							string = string+formatEvent(entries[i]);
-							}
-							console.log(string);
-							return string
-						}
-						function insertEntries(entries) {
-							console.log(entries);
-							var a = document.getElementById('initialEvents');
-							a.innerHTML=formatEvents(entries);
-							$("#initialEvents").enhanceWithin();
-						}
-
-						function setMonth(date) {
-						var month = date.getMonth();
-						var a = document.getElementById('month');
-							a.innerHTML=months[month]+" Events";
-						}
-
-						function currentDate() {
-							var d = new Date();
-							return d;
-						}
-						function startMonth(date) {
-						return new Date(date.getFullYear(), date.getMonth(), 1);
-						
-						}
-						function endOfTheMonth(date) {
-						return new Date(date.getFullYear(), (date.getMonth() + 1)%12, 0);
-						}
-						function fourteenDate(date) {
-							var c = new Date(date.getTime() +14*24*60*60*1000);
-							return c;
-						}
-
-						</script>
+					<script src="ICalEvent.js"></script>
+					<script src="calendar.js"></script>
     </head>
     
    <body id="index">
@@ -96,32 +29,30 @@
             </div>
             <br>
 
-                    <h2 id='month' ></h2>
+                    <h2 class="month-name"></h2>
 
                     <div data-role="collapsible-set" id="initialEvents">
 					</div>
-			<!--This is for a drop down menu to choose calendar month, it is currently broken and commented out-->		
-			<!--		<form>
+		
+		<form>
          <div class="ui-field-contain">
-             <select id="selectedOption" onchange="if(this.value) reloadCalendar())" data-theme="e">
-                 <!--<option value="">Stuff To Do!</option>
-                 <!--<option value="nextFourteenDays.html">Next 14 Days</option>
-                 <option value="0">January</option>
-                 <option value="1">February</option>
-                 <option value="2">March</option>
-                 <option value="3">April</option>
-                 <option value="4">May</option>
-                 <option value="5">June</option>
-                 <option value="6">July</option>
-                 <option value="7">August</option>
-                 <option value="8">September</option>
-				 <option value="9">October</option>
-				 <option value="10">November</option>
-				 <option value="11">December</option>
+             <select id="month" data-theme="e">
+                 <option value="01">January</option>
+                 <option value="02">February</option>
+                 <option value="03">March</option>
+                 <option value="04">April</option>
+                 <option value="05">May</option>
+                 <option value="06">June</option>
+                 <option value="07">July</option>
+                 <option value="08">August</option>
+                 <option value="09">September</option>
+				 <option value="10">October</option>
+				 <option value="11">November</option>
+				 <option value="12">December</option>
              </select>
+         	<input type="number" min="1000" max="9999" id="year" value="2017">
          </div>
-    </form>  
-    -->
+    </form>
   </div>
  <!--Panel-->
         <div data-role="panel" id="myPanel">
@@ -140,7 +71,7 @@
                 <a href="#" data-ajax="false">
                     <div class="side-menu-option"  style="font-weight: bold">Calendar</div>
                 </a>
-                <a href="" data-ajax="false">
+                <a href="https://www.bisd303.org/bhs/staff/" target="_blank" data-ajax="false">
                     <div class="side-menu-option">Staff Directory</div>
                 </a>
                 <a href="../new-student/welcome.html" data-ajax="false">
@@ -159,22 +90,6 @@
             <p class="copyright">Developed by Jason Sovick, Kirk Godtfredsen and members of the 2016-17 AP Computer Science classes at BHS</p>
             <p class="copyright">&copy; 2017 Bainbridge Youth Services. All rights reserved. askBYS app v2.0</p>
 			</div>  
-		
-    <script>
-	var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //no leap year
-	var currentDate = currentDate();
-	var startDate = startMonth(currentDate);
-	setMonth(currentDate);
-	var endDate= fourteenDate(currentDate);
-	fetchCalendar(startDate,endDate,insertEntries);
-	var getDateFromValue = function(monthNumber) {
-		return new Date(this.getFullYear(), monthNumber, 1, 0, 0, 0, 0);
-	}
-	var reloadCalendar = function() {
-		fetchCalendar(getDateFromValue(document.getElementById(selectedOption).value), getDateFromValue(document.getElementById(selectedOption).value+1), insertEntries);
-	}
-	
-	
-	</script>
+
 	</body>
 </html>
